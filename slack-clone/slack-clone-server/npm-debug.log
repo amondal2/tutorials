@@ -1,0 +1,240 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'yarn',
+1 verbose cli   '--global' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.4
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData yarn
+8 silly fetchNamedPackageData yarn
+9 silly mapToRegistry name yarn
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'yarn',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'yarn',
+12 silly mapToRegistry   name: 'yarn',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/yarn
+14 verbose request uri https://registry.npmjs.org/yarn
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 8:44:03 PM
+17 verbose request id 645362aabdf57e69
+18 http request GET https://registry.npmjs.org/yarn
+19 http 200 https://registry.npmjs.org/yarn
+20 verbose headers { 'content-type': 'application/json; charset=UTF-8',
+20 verbose headers   server: 'UploadServer',
+20 verbose headers   'cache-control': 'max-age=300',
+20 verbose headers   'last-modified': 'Sun, 25 Feb 2018 6:35:35 GMT',
+20 verbose headers   etag: '"5a925937-3452e"',
+20 verbose headers   'x-npm-region': 'US-East',
+20 verbose headers   'content-encoding': 'gzip',
+20 verbose headers   'content-length': '12758',
+20 verbose headers   'accept-ranges': 'bytes',
+20 verbose headers   date: 'Mon, 26 Feb 2018 01:44:05 GMT',
+20 verbose headers   via: '1.1 varnish',
+20 verbose headers   age: '10422',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'x-served-by': 'cache-dca17733-DCA',
+20 verbose headers   'x-cache': 'HIT',
+20 verbose headers   'x-cache-hits': '1',
+20 verbose headers   'x-timer': 'S1519609445.328921,VS0,VE1',
+20 verbose headers   vary: 'Accept-Encoding, Accept' }
+21 silly get cb [ 200,
+21 silly get   { 'content-type': 'application/json; charset=UTF-8',
+21 silly get     server: 'UploadServer',
+21 silly get     'cache-control': 'max-age=300',
+21 silly get     'last-modified': 'Sun, 25 Feb 2018 6:35:35 GMT',
+21 silly get     etag: '"5a925937-3452e"',
+21 silly get     'x-npm-region': 'US-East',
+21 silly get     'content-encoding': 'gzip',
+21 silly get     'content-length': '12758',
+21 silly get     'accept-ranges': 'bytes',
+21 silly get     date: 'Mon, 26 Feb 2018 01:44:05 GMT',
+21 silly get     via: '1.1 varnish',
+21 silly get     age: '10422',
+21 silly get     connection: 'keep-alive',
+21 silly get     'x-served-by': 'cache-dca17733-DCA',
+21 silly get     'x-cache': 'HIT',
+21 silly get     'x-cache-hits': '1',
+21 silly get     'x-timer': 'S1519609445.328921,VS0,VE1',
+21 silly get     vary: 'Accept-Encoding, Accept' } ]
+22 verbose get saving yarn to /Users/agastyamondal/.npm/registry.npmjs.org/yarn/.cache.json
+23 verbose correctMkdir /Users/agastyamondal/.npm correctMkdir not in flight; initializing
+24 silly install normalizeTree
+25 silly loadCurrentTree Finishing
+26 silly loadIdealTree Starting
+27 silly install loadIdealTree
+28 silly cloneCurrentTree Starting
+29 silly install cloneCurrentTreeToIdealTree
+30 silly cloneCurrentTree Finishing
+31 silly loadShrinkwrap Starting
+32 silly install loadShrinkwrap
+33 silly loadShrinkwrap Finishing
+34 silly loadAllDepsIntoIdealTree Starting
+35 silly install loadAllDepsIntoIdealTree
+36 silly resolveWithNewModule yarn@1.3.2 checking installable status
+37 silly cache add args [ 'yarn', null ]
+38 verbose cache add spec yarn
+39 silly cache add parsed spec Result {
+39 silly cache add   raw: 'yarn',
+39 silly cache add   scope: null,
+39 silly cache add   escapedName: 'yarn',
+39 silly cache add   name: 'yarn',
+39 silly cache add   rawSpec: '',
+39 silly cache add   spec: 'latest',
+39 silly cache add   type: 'tag' }
+40 silly addNamed yarn@latest
+41 verbose addNamed "latest" is being treated as a dist-tag for yarn
+42 info addNameTag [ 'yarn', 'latest' ]
+43 silly mapToRegistry name yarn
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry data Result {
+46 silly mapToRegistry   raw: 'yarn',
+46 silly mapToRegistry   scope: null,
+46 silly mapToRegistry   escapedName: 'yarn',
+46 silly mapToRegistry   name: 'yarn',
+46 silly mapToRegistry   rawSpec: '',
+46 silly mapToRegistry   spec: 'latest',
+46 silly mapToRegistry   type: 'tag' }
+47 silly mapToRegistry uri https://registry.npmjs.org/yarn
+48 verbose addNameTag registry:https://registry.npmjs.org/yarn not in flight; fetching
+49 verbose get https://registry.npmjs.org/yarn not expired, no request
+50 silly addNameTag next cb for yarn with tag latest
+51 silly addNamed yarn@1.3.2
+52 verbose addNamed "1.3.2" is a plain semver version for yarn
+53 warn deprecated yarn@1.3.2: It is recommended to install Yarn using the native installation method for your environment. See https://yarnpkg.com/en/docs/install
+54 silly mapToRegistry name yarn
+55 silly mapToRegistry using default registry
+56 silly mapToRegistry registry https://registry.npmjs.org/
+57 silly mapToRegistry data Result {
+57 silly mapToRegistry   raw: 'yarn',
+57 silly mapToRegistry   scope: null,
+57 silly mapToRegistry   escapedName: 'yarn',
+57 silly mapToRegistry   name: 'yarn',
+57 silly mapToRegistry   rawSpec: '',
+57 silly mapToRegistry   spec: 'latest',
+57 silly mapToRegistry   type: 'tag' }
+58 silly mapToRegistry uri https://registry.npmjs.org/yarn
+59 verbose addRemoteTarball https://registry.npmjs.org/yarn/-/yarn-1.3.2.tgz not in flight; adding
+60 verbose addRemoteTarball [ 'https://registry.npmjs.org/yarn/-/yarn-1.3.2.tgz',
+60 verbose addRemoteTarball   '5939762581b5b4ddcd3418c0f6be42df3aee195f' ]
+61 info retry fetch attempt 1 at 8:44:03 PM
+62 info attempt registry request try #1 at 8:44:03 PM
+63 http fetch GET https://registry.npmjs.org/yarn/-/yarn-1.3.2.tgz
+64 http fetch 200 https://registry.npmjs.org/yarn/-/yarn-1.3.2.tgz
+65 silly fetchAndShaCheck shasum 5939762581b5b4ddcd3418c0f6be42df3aee195f
+66 verbose addTmpTarball /var/folders/1r/p55cplgj2md2kv9psvdkg_040000gn/T/npm-3563-27e75f87/registry.npmjs.org/yarn/-/yarn-1.3.2.tgz not in flight; adding
+67 verbose addTmpTarball already have metadata; skipping unpack for yarn@1.3.2
+68 verbose correctMkdir /Users/agastyamondal/.npm correctMkdir not in flight; initializing
+69 silly cache afterAdd yarn@1.3.2
+70 verbose afterAdd /Users/agastyamondal/.npm/yarn/1.3.2/package/package.json not in flight; writing
+71 verbose correctMkdir /Users/agastyamondal/.npm correctMkdir not in flight; initializing
+72 verbose afterAdd /Users/agastyamondal/.npm/yarn/1.3.2/package/package.json written
+73 silly loadAllDepsIntoIdealTree Finishing
+74 silly loadIdealTree Finishing
+75 silly currentTree lib
+76 silly idealTree lib
+76 silly idealTree └── yarn@1.3.2
+77 silly generateActionsToTake Starting
+78 silly install generateActionsToTake
+79 silly generateActionsToTake Finishing
+80 silly diffTrees action count 1
+81 silly diffTrees add yarn@1.3.2
+82 silly decomposeActions action count 8
+83 silly decomposeActions fetch yarn@1.3.2
+84 silly decomposeActions extract yarn@1.3.2
+85 silly decomposeActions test yarn@1.3.2
+86 silly decomposeActions preinstall yarn@1.3.2
+87 silly decomposeActions build yarn@1.3.2
+88 silly decomposeActions install yarn@1.3.2
+89 silly decomposeActions postinstall yarn@1.3.2
+90 silly decomposeActions finalize yarn@1.3.2
+91 silly runTopLevelLifecycles Starting
+92 silly executeActions Starting
+93 silly install executeActions
+94 silly doSerial global-install 0
+95 silly doParallel fetch 1
+96 verbose correctMkdir /Users/agastyamondal/.npm/_locks correctMkdir not in flight; initializing
+97 verbose lock using /Users/agastyamondal/.npm/_locks/staging-3a08f0df5026584d.lock for /usr/local/lib/node_modules/.staging
+98 silly doParallel extract 1
+99 silly extract yarn@1.3.2
+100 verbose unbuild lib/node_modules/.staging/yarn-53412bb0
+101 silly gentlyRm /usr/local/lib/node_modules/.staging/yarn-53412bb0 is being purged from base /usr/local
+102 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/.staging/yarn-53412bb0
+103 verbose tar unpack /Users/agastyamondal/.npm/yarn/1.3.2/package.tgz
+104 verbose tar unpacking to /usr/local/lib/node_modules/.staging/yarn-53412bb0
+105 silly gentlyRm /usr/local/lib/node_modules/.staging/yarn-53412bb0 is being purged
+106 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/.staging/yarn-53412bb0
+107 silly gunzTarPerm modes [ '755', '644' ]
+108 silly gunzTarPerm extractEntry LICENSE
+109 silly gunzTarPerm extractEntry README.md
+110 silly gunzTarPerm extractEntry bin/
+111 silly gunzTarPerm extractEntry bin/yarn.cmd
+112 silly gunzTarPerm extractEntry bin/yarn.js
+113 silly gunzTarPerm extractEntry bin/yarnpkg.cmd
+114 silly gunzTarPerm extractEntry bin/yarnpkg
+115 silly gunzTarPerm extractEntry bin/yarn
+116 silly gunzTarPerm extractEntry lib/
+117 silly gunzTarPerm extractEntry lib/cli.js
+118 silly gunzTarPerm extractEntry lib/v8-compile-cache.js
+119 silly gunzTarPerm extractEntry package.json
+120 silly gentlyRm /usr/local/lib/node_modules/.staging/yarn-53412bb0/node_modules is being purged
+121 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/.staging/yarn-53412bb0/node_modules
+122 silly doParallel preinstall 1
+123 silly preinstall yarn@1.3.2 /usr/local/lib/node_modules/.staging/yarn-53412bb0
+124 info lifecycle yarn@1.3.2~preinstall: yarn@1.3.2
+125 silly lifecycle yarn@1.3.2~preinstall: no script for preinstall, continuing
+126 silly doReverseSerial remove 0
+127 silly doSerial move 0
+128 silly doSerial finalize 1
+129 silly finalize /usr/local/lib/node_modules/yarn
+130 silly doSerial build 1
+131 silly build yarn@1.3.2
+132 info linkStuff yarn@1.3.2
+133 silly linkStuff yarn@1.3.2 has /usr/local/lib/node_modules as its parent node_modules
+134 silly linkStuff yarn@1.3.2 is part of a global install
+135 silly linkStuff yarn@1.3.2 is installed into a global node_modules
+136 silly linkStuff yarn@1.3.2 is installed into the top-level global node_modules
+137 verbose linkBins yarn@1.3.2
+138 verbose link bins [ { yarn: './bin/yarn.js', yarnpkg: './bin/yarn.js' },
+138 verbose link bins   '/usr/local/bin',
+138 verbose link bins   true ]
+139 verbose linkMans yarn@1.3.2
+140 silly gentlyRm /usr/local/bin/yarn is being gently removed
+141 silly gentlyRm /usr/local/bin/yarnpkg is being gently removed
+142 verbose unlock done using /Users/agastyamondal/.npm/_locks/staging-3a08f0df5026584d.lock for /usr/local/lib/node_modules/.staging
+143 silly rollbackFailedOptional Starting
+144 silly rollbackFailedOptional Finishing
+145 silly runTopLevelLifecycles Finishing
+146 silly install printInstalled
+147 verbose stack Error: EACCES: permission denied, symlink '../lib/node_modules/yarn/bin/yarn.js' -> '/usr/local/bin/yarn'
+147 verbose stack     at Error (native)
+148 verbose cwd /Users/agastyamondal/tutorials/slack-clone/slack-clone-server
+149 error Darwin 16.5.0
+150 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "yarn" "--global"
+151 error node v6.11.4
+152 error npm  v3.10.10
+153 error path ../lib/node_modules/yarn/bin/yarn.js
+154 error code EACCES
+155 error errno -13
+156 error syscall symlink
+157 error Error: EACCES: permission denied, symlink '../lib/node_modules/yarn/bin/yarn.js' -> '/usr/local/bin/yarn'
+157 error     at Error (native)
+157 error  { Error: EACCES: permission denied, symlink '../lib/node_modules/yarn/bin/yarn.js' -> '/usr/local/bin/yarn'
+157 error     at Error (native)
+157 error   errno: -13,
+157 error   code: 'EACCES',
+157 error   syscall: 'symlink',
+157 error   path: '../lib/node_modules/yarn/bin/yarn.js',
+157 error   dest: '/usr/local/bin/yarn' }
+158 error Please try running this command again as root/Administrator.
+159 verbose exit [ -13, true ]
