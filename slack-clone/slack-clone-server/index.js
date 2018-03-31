@@ -5,15 +5,19 @@ import { makeExecutableSchema } from 'graphql-tools';
 
 import typeDefs from './schema';
 import resolvers from './resolvers';
+import models from './models';
 
-export const schema = makeExecutableSchema({
-    typeDefs,
-    resolvers,
+const schema = makeExecutableSchema({
+  typeDefs,
+  resolvers,
 });
+
 const app = express();
-const graphqlEndpoint = '/graphql'
+const graphqlEndpoint = '/graphql';
 // bodyParser is needed just for POST.
 app.use(graphqlEndpoint, bodyParser.json(), graphqlExpress({ schema }));
 app.use('/graphiql', graphiqlExpress({ endpointURL: graphqlEndpoint }));
 
-app.listen(8080);
+models.sequelize.sync().then(() => {
+  app.listen(8080);
+});
