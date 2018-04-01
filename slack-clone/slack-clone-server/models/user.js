@@ -20,7 +20,7 @@ export default (sequelize, DataTypes) => {
       },
     });
     // N:M relationship
-    User.belongsToMany(models.Team, {
+    User.belongsToMany(models.Channel, {
       through: 'channel_member',
       foreignKey: {
         name: 'userId',
