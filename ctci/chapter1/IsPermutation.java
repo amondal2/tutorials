@@ -8,7 +8,7 @@ public class IsPermutation {
     }
 
     public static boolean isPermutation(String a, String b) {
-        return sort(a) == sort(b);
+        return sort(a).equals(sort(b));
     }
 
     public static void main(String[] args) {
