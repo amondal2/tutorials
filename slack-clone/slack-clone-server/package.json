@@ -28,6 +28,7 @@
     "graphql": "^0.13.1",
     "graphql-tools": "^2.21.0",
     "jshashes": "^1.0.7",
+    "lodash": "^4.17.5",
     "merge-graphql-schemas": "^1.5.1",
     "pg": "^7.4.1",
     "sequelize": "^4.37.5"

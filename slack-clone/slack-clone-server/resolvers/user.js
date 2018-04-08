@@ -1,4 +1,13 @@
 import Hashes from 'jshashes';
+import _ from 'lodash';
+
+const formatErrors = (e, models) => {
+  if (e instanceof models.sequelize.ValidationError) {
+    return e.errors.map(x => _.pick(x, ['path', 'message']));
+  }
+
+  return [{ path: 'name', message: 'something went wrong' }];
+};
 
 export default {
   Query: {
@@ -9,11 +18,29 @@ export default {
   Mutation: {
     register: async (parent, { password, ...otherArgs }, { models }) => {
       try {
+        if (password.length < 5 || password.length > 100) {
+          return {
+            ok: false,
+            errors: [{
+              path: 'password',
+              message: 'The password needs to be longer than 5 characters and less than 100',
+            }],
+          };
+        }
         const hashedPassword = new Hashes.SHA1().b64(password);
-        await models.User.create({ ...otherArgs, password: hashedPassword });
-        return true;
+        const user = await models.User.create({
+          ...otherArgs,
+          password: hashedPassword,
+        });
+        return {
+          ok: true,
+          user,
+        };
       } catch (err) {
-        return false;
+        return {
+          ok: false,
+          errors: formatErrors(err, models),
+        };
       }
     },
   },
