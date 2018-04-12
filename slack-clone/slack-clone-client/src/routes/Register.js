@@ -1,7 +1,6 @@
 import React from 'react';
 import { Message, Button, Input, Container, Header } from 'semantic-ui-react';
-import { graphql } from 'react-apollo';
-import gql from 'graphql-tag';
+import { gql, graphql } from 'react-apollo';
 
 class Register extends React.Component {
   state = {
