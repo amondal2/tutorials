@@ -54,13 +54,13 @@ class Register extends React.Component {
     } = this.state;
     const errorList = [];
     if (usernameError) {
-        errorList.push(usernameError);
+      errorList.push(usernameError);
     }
     if (emailError) {
-        errorList.push(emailError);
+      errorList.push(emailError);
     }
     if (passwordError) {
-        errorList.push(passwordError);
+      errorList.push(passwordError);
     }
     return (
       <Container text>
@@ -91,11 +91,13 @@ class Register extends React.Component {
           fluid
         />
         <Button onClick={this.onSubmit}> Submit </Button>
-        {usernameError || emailError || passwordError ? (<Message
-        error
-        header="There was an error with your submission"
-        list={errorList}
-        /> ): null}
+        {usernameError || emailError || passwordError ? (
+          <Message
+            error
+            header="There was an error with your submission"
+            list={errorList}
+          />
+        ) : null}
       </Container>
     );
   }

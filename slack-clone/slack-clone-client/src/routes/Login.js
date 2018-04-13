@@ -19,7 +19,7 @@ class Login extends React.Component {
     const response = await this.props.mutate({
       variables: { email, password },
     });
-    const {ok, token, refreshToken } = response.data.login;
+    const { ok, token, refreshToken } = response.data.login;
     if (ok) {
       localStorage.setItem('token', token);
       localStorage.setItem('refreshToken', refreshToken);
