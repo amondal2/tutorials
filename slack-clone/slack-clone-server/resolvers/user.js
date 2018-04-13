@@ -1,4 +1,3 @@
-import Hashes from 'jshashes';
 import _ from 'lodash';
 
 import { tryLogin } from '../auth';
@@ -20,25 +19,9 @@ export default {
   Mutation: {
     login: (parent, { password, email }, { models, SECRET, SECRET2 }) =>
       tryLogin(email, password, models, SECRET, SECRET2),
-    register: async (parent, { password, ...otherArgs }, { models }) => {
+    register: async (parent, args, { models }) => {
       try {
-        if (password.length < 5 || password.length > 100) {
-          return {
-            ok: false,
-            errors: [
-              {
-                path: 'password',
-                message:
-                  'The password needs to be longer than 5 characters and less than 100',
-              },
-            ],
-          };
-        }
-        const hashedPassword = new Hashes.SHA1().b64(password);
-        const user = await models.User.create({
-          ...otherArgs,
-          password: hashedPassword,
-        });
+        const user = await models.User.create(args);
         return {
           ok: true,
           user,
