@@ -8,6 +8,7 @@
     "apollo-link": "^1.2.2",
     "apollo-link-context": "^1.0.8",
     "apollo-link-http": "^1.5.4",
+    "formik": "^0.11.11",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.1",
     "jwt-decode": "^2.2.0",
@@ -19,7 +20,7 @@
     "react-dom": "^16.3.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
-    "semantic-ui-css": "^2.3.1",
+    "semantic-ui-css": "2.2.14",
     "semantic-ui-react": "^0.79.1",
     "styled-components": "^3.2.6"
   },
