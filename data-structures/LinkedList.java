@@ -192,4 +192,17 @@ public class LinkedList<T> implements Iterable<T> {
             throw new UnsupportedOperationException();
         }
     }
+
+    public static void main(String[] args) {
+        LinkedList<String> testList = new LinkedList<String>();
+        assert(testList.isEmpty() == true);
+        testList.addFirst("Hello");
+        assert(testList.getFirst() == "Hello");
+        testList.addFirst("World");
+        assert(testList.getFirst() == "World");
+        testList.removeFirst();
+        assert(testList.getFirst() == "Hello");
+        testList.clear();
+        assert(testList.isEmpty() == true);
+    }
 }
