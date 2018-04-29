@@ -17,11 +17,11 @@ const ViewTeam = ({
     return null;
   }
 
-  const teamIdx = !!teamId
+  const teamIdx = teamId
     ? findIndex(allTeams, ['id', parseInt(teamId, 10)])
     : 0;
   const team = allTeams[teamIdx];
-  const channelIdx = !!channelId ? findIndex(team.channels, ['id', parseInt(channelId, 10)]) : 0;
+  const channelIdx = channelId ? findIndex(team.channels, ['id', parseInt(channelId, 10)]) : 0;
   const channel = team.channels[channelIdx];
 
   return (
