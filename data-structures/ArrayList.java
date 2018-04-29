@@ -51,4 +51,15 @@ public class ArrayList {
         this.data = Arrays.copyOf(this.data, this.data.length * 2);
     }
 
+    public static void main(String[] args) {
+        ArrayList testArrayList = new ArrayList();
+        assert testArrayList.size() == 0;
+        testArrayList.add("Hello");
+        testArrayList.add("world");
+        assert testArrayList.size() == 2;
+        testArrayList.remove(0);
+        assert testArrayList.size() == 1;
+        assert testArrayList.get(0) == "world";
+    }
+
 }
