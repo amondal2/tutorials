@@ -11,23 +11,25 @@ import AppLayout from '../components/AppLayout';
 import Sidebar from '../containers/Sidebar';
 
 const ViewTeam = ({
-  data: { loading, allTeams },
+  data: { loading, allTeams, inviteTeams },
   match: { params: { teamId, channelId } },
 }) => {
   if (loading) {
     return null;
   }
 
-  if (!allTeams.length) {
+  const teams = [...allTeams, ...inviteTeams];
+
+  if (!teams.length) {
     return <Redirect to="/create-team" />;
   }
 
   const teamIdInteger = parseInt(teamId, 10);
 
   const teamIdx = teamIdInteger
-    ? findIndex(allTeams, ['id', teamIdInteger])
+    ? findIndex(teams, ['id', teamIdInteger])
     : 0;
-  const team = teamIdx === -1 ? allTeams[0] : allTeams[teamIdx];
+  const team = teamIdx === -1 ? teams[0] : teams[teamIdx];
 
   const channelIdInteger = parseInt(channelId, 10);
   const channelIdx = channelIdInteger
@@ -38,7 +40,7 @@ const ViewTeam = ({
   return (
     <AppLayout>
       <Sidebar
-        teams={allTeams.map(t => ({
+        teams={teams.map(t => ({
           id: t.id,
           letter: t.name.charAt(0).toUpperCase(),
         }))}
