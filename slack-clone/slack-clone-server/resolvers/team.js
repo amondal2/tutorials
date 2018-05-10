@@ -28,7 +28,7 @@ export default {
             errors: [
               {
                 path: 'email',
-                message: 'You are the team owner',
+                message: 'You are not the team owner',
               },
             ],
           };
