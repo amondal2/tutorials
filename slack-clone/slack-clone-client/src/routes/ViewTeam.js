@@ -55,7 +55,7 @@ const ViewTeam = ({
           </ul>
         </Messages>
       )}
-      {channel && <SendMessage channelName={channel.name} />}
+      {channel && <SendMessage channelName={channel.name} channelId={channel.id} />}
     </AppLayout>
   );
 };
