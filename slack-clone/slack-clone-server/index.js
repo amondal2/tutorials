@@ -6,16 +6,18 @@ import path from 'path';
 import { fileLoader, mergeTypes, mergeResolvers } from 'merge-graphql-schemas';
 import cors from 'cors';
 import jwt from 'jsonwebtoken';
-import { refreshTokens } from './auth';
+import { createServer } from 'http';
+import { execute, subscribe } from 'graphql';
+import { PubSub } from 'graphql-subscriptions';
+import { SubscriptionServer } from 'subscriptions-transport-ws';
 
+import { refreshTokens } from './auth';
 import models from './models';
 
 const SECRET = 'asdfjaksjfl4j';
 const SECRET2 = 'fdsfdafdfdfdsfdsafdsa14rgtw';
 const typeDefs = mergeTypes(fileLoader(path.join(__dirname, './schema')));
-const resolvers = mergeResolvers(
-  fileLoader(path.join(__dirname, './resolvers')),
-);
+const resolvers = mergeResolvers(fileLoader(path.join(__dirname, './resolvers')));
 
 const schema = makeExecutableSchema({
   typeDefs,
@@ -70,7 +72,23 @@ app.use(
   })),
 );
 app.use('/graphiql', graphiqlExpress({ endpointURL: graphqlEndpoint }));
+const server = createServer(app);
+
 
 models.sequelize.sync({}).then(() => {
-  app.listen(8080);
+  server.listen(8080, () => {
+    // eslint-disable-next-line no-new
+    new SubscriptionServer(
+      {
+        execute,
+        subscribe,
+        schema,
+      },
+      {
+        server,
+        path: '/subscriptions',
+      },
+    );
+  });
 });
+
