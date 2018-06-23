@@ -1,4 +1,5 @@
 // LinkedListNode utility class used by CTCI book
+package chapter2; 
 
 public class LinkedListNode {
     public LinkedListNode next, prev, last;
