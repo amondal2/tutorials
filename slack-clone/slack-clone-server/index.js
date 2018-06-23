@@ -8,7 +8,6 @@ import cors from 'cors';
 import jwt from 'jsonwebtoken';
 import { createServer } from 'http';
 import { execute, subscribe } from 'graphql';
-import { PubSub } from 'graphql-subscriptions';
 import { SubscriptionServer } from 'subscriptions-transport-ws';
 
 import { refreshTokens } from './auth';
@@ -73,7 +72,6 @@ app.use(
 );
 app.use('/graphiql', graphiqlExpress({ endpointURL: graphqlEndpoint }));
 const server = createServer(app);
-
 
 models.sequelize.sync({}).then(() => {
   server.listen(8080, () => {
