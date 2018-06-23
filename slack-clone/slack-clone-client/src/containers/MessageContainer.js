@@ -39,7 +39,6 @@ class MessageContainer extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     const { data: { loading, messages } } = this.props;
     return loading ? null : (
       <Messages>
