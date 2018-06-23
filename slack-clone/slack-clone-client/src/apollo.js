@@ -36,7 +36,6 @@ const afterwareLink = new ApolloLink((operation, forward) => {
 
 const httpLinkWithMiddleware = afterwareLink.concat(middlewareLink.concat(httpLink));
 
-// Create a WebSocket link:
 const wsLink = new WebSocketLink({
   uri: 'ws://localhost:8080/subscriptions',
   options: {
@@ -44,10 +43,7 @@ const wsLink = new WebSocketLink({
   },
 });
 
-// using the ability to split links, you can send data to each link
-// depending on what kind of operation is being sent
 const link = split(
-  // split based on operation type
   ({ query }) => {
     const { kind, operation } = getMainDefinition(query);
     return kind === 'OperationDefinition' && operation === 'subscription';
