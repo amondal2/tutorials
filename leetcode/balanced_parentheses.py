@@ -13,8 +13,10 @@ def is_balanced(s):
                 parens_stack.pop()
             else:
                 return False
+        else:
+            return False
     return len(parens_stack) == 0
-    
+
 
 assert(is_balanced("([])") == True)
 assert(is_balanced("[)}") == False)
